@@ -52,7 +52,7 @@ export default function Chat({ messages }) {
             ) : (
               <>
                 <UserIcon className="h-6 w-6 min-h-6 min-w-6 my-3 text-gray-500 dark:text-gray-300" />
-                <div className="bg-blue-500 text-white rounded-lg p-4">
+                <div className="bg-brand-darkGreen text-white rounded-lg p-4">
                   <p className="min-h-6 overflow-wrap-anywhere">
                     {msg.content}
                   </p>

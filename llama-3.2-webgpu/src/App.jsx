@@ -8,9 +8,9 @@ import Progress from "./components/Progress";
 const IS_WEBGPU_AVAILABLE = !!navigator.gpu;
 const STICKY_SCROLL_THRESHOLD = 120;
 const EXAMPLES = [
-  "Give me some tips to improve my time management skills.",
-  "What is the difference between AI and ML?",
-  "Write python code to compute the nth fibonacci number.",
+  "What can I plant this time of year?",
+  "How do I collect and store sunflower seeds for next year?",
+  "Write a garden plan for my backyard",
 ];
 
 function App() {
@@ -187,7 +187,7 @@ function App() {
   }, [messages, isRunning]);
 
   return IS_WEBGPU_AVAILABLE ? (
-    <div className="flex flex-col h-screen mx-auto items justify-end text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900">
+    <div className="flex flex-col h-screen mx-auto items justify-end text-brand-lightGreen dark:text-gray-200 bg-brand-darkGreen">
       {status === null && messages.length === 0 && (
         <div className="h-full overflow-auto scrollbar-thin flex justify-center items-center flex-col relative">
           <div className="flex flex-col items-center mb-1 max-w-[340px] text-center">
@@ -197,7 +197,7 @@ function App() {
               height="auto"
               className="block"
             ></img>
-            <h1 className="text-4xl font-bold mb-1">Llama-3.2 WebGPU</h1>
+            <h1 className="text-4xl font-bold mb-1">GreenThumb AI</h1>
             <h2 className="font-semibold">
               A private and powerful AI chatbot <br />
               that runs locally in your browser.
@@ -256,7 +256,7 @@ function App() {
             )}
 
             <button
-              className="border px-4 py-2 rounded-lg bg-blue-400 text-white hover:bg-blue-500 disabled:bg-blue-100 disabled:cursor-not-allowed select-none"
+              className="border px-4 py-2 rounded-lg bg-brand-darkGreen text-white hover:bg-brand-lightGreen disabled:bg-blue-100 disabled:cursor-not-allowed select-none"
               onClick={() => {
                 worker.current.postMessage({ type: "load" });
                 setStatus("loading");
